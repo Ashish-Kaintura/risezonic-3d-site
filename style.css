@@ -1,0 +1,156 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+
+
+#main {
+    position: relative;
+    overflow: hidden;
+    background-color: #111111;
+    height: auto;
+    z-index: 10;
+}
+
+#page {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #f1f1f1; */
+    background-color: #111111;
+}
+
+#page1 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1f1f1;
+}
+
+#page2 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #f1f1f1; */
+    background-color: #111111;
+}
+
+#page3 {
+    position: relative;
+    /* height: 128vh; */
+    /* width: 100vw; */
+    /* height: auto; */
+}
+
+
+#page4 {
+    position: relative;
+    /* height: 100vh; */
+    width: 100vw;
+    padding-bottom: 6rem;
+
+}
+
+#page5 {
+    position: relative;
+    /* height: 100vh; */
+    /* width: 100vw; */
+
+}
+
+#page6 {
+    position: relative;
+    /* height: 100vh;
+    width: 100vw; */
+
+}
+
+#page7 {
+    position: relative;
+
+
+}
+
+#page8 {
+    position: relative;
+    /* height: 100vh; */
+    /* background-color: #FE53BB;
+    width: 100vw; */
+
+}
+
+#page9 {
+    position: relative;
+
+    /* width: 100vw; */
+
+}
+
+#page10 {
+    position: relative;
+    height: 103vh;
+    /* background-color: #FE53BB; */
+    /* width: 100vw; */
+
+}
+
+#page11 {
+    position: relative;
+    /* height: 100vh; */
+    /* background-color: #FE53BB;
+    width: 100vw; */
+}
+
+canvas {
+    position: relative;
+    /* left: 50%; */
+    z-index: 9;
+    /* transform: translate(-50%, 0); */
+    /* bottom: 0; */
+
+}
+
+
+/* loop  */
+#loop {
+    display: flex;
+    /* position: absolute; */
+    top: 10%;
+    height: 25%;
+    width: 100%;
+    font-size: 100px;
+    white-space: nowrap;
+    font-family: gilroy;
+}
+
+#loop>h1 {
+    font-weight: 400;
+    animation-name: anim;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#loop>h1>span {
+    -webkit-text-stroke: 1.2px #000;
+    color: transparent;
+    font-weight: 500;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* anime box  */
+
+/* ///// our work button*/
+

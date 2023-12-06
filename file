@@ -1,0 +1,285 @@
+   <div id="page">
+        <div class="bannerbox">
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+        </div>
+        <div class="relative">
+          <section class="bannerbox2">
+            <div id="star"></div>
+            <div id="star2"></div>
+            <div id="star3"></div>
+          </section>
+        </div>
+
+        <div
+          class="sm:flex hidden sm:justify-between w-full absolute sm:pt-28 px-10"
+          style="z-index: 10"
+        >
+          <div class="sm:h-96 w-96 pt-5">
+            <ul
+              class="sm:flex hidden justify-center flex-col text-center pt-28 text-white"
+            >
+              <li class="">
+                <a href=""></a
+                ><i
+                  class="fa-brands fa-instagram fa-2xl hover:scale-125 trasnsition duration-200 ease-in hover:text-[#f0661b]"
+                ></i>
+              </li>
+              <li class="mt-5">
+                <a href=""></a
+                ><i
+                  class="fa-brands fa-whatsapp fa-2xl hover:scale-125 trasnsition duration-200 ease-in hover:text-[#f0661b]"
+                ></i>
+              </li>
+              <li class="mt-5">
+                <a href=""></a
+                ><i
+                  class="fa-brands fa-linkedin-in fa-2xl hover:scale-125 trasnsition duration-200 ease-in hover:text-[#f0661b]"
+                ></i>
+              </li>
+              <li class="mt-5">
+                <a href=""></a
+                ><i
+                  class="fa-brands fa-facebook fa-2xl hover:scale-125 trasnsition duration-200 ease-in hover:text-[#f0661b]"
+                ></i>
+              </li>
+            </ul>
+          </div>
+          <div class="">
+            <div class="sm:pt-28">
+              <h1
+                class="uppercase"
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  font-size: 40px;
+                  line-height: 1.5;
+                "
+              >
+                Welcome to <br />RIsezonic
+                <br />
+              </h1>
+              <h2
+                class="hover"
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  margin-top: 1rem;
+                  line-height: 1.5;
+                "
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                <br />
+                Labore, quaerat pariatur ratione veniam modi quia accusantium
+                <br />
+                illo laborum incidunt debitis blanditiis earum nulla <br />
+                consequuntur hic ab qui quo! Minima, officiis. <br />
+              </h2>
+            </div>
+            <br />
+            <ul class="text-white sm:flex hidden gap-5">
+              <li>
+                <a href=""
+                  ><button
+                    class="bg-[transparent] py-2 px-4 rounded-lg font-robotoflex border-2 border-red-600 text-[14px] hover:bg-red-600 hover:text-white trasnsition ease-in duration-200"
+                  >
+                    KNOW MORE
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <canvas></canvas>
+      </div>
+      <div id="page1">
+        <div class="bannerbox">
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+        </div>
+        <div
+          class="sm:flex hidden sm:justify-between w-full absolute sm:pt-28 px-10 items-center"
+          style="z-index: 10"
+        >
+          <div class="pt-28">
+            <h1
+              class="uppercase"
+              style="
+                font-family: gilroy;
+                font-weight: 400;
+                color: rgb(20, 20, 20);
+                font-size: 40px;
+                line-height: 1.5;
+              "
+            >
+              WEBSITE AND APP
+            </h1>
+            <h1
+              style="
+                font-family: gilroy;
+                font-weight: 400;
+                color: rgb(20, 20, 20);
+                font-size: 40px;
+                line-height: 1.5;
+              "
+            >
+              DEVELOPMENT
+            </h1>
+            <br />
+            <h3
+              style="
+                font-family: gilroy;
+                font-weight: 400;
+                color: rgb(20, 20, 20);
+                font-size: 15px;
+                line-height: 1.5;
+              "
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae
+              <br />
+              nobis architecto iure illum totam doloremque ab necessitatibus,
+              <br />
+              tempora officiis quisquam beatae voluptas maiores odio.
+              Consequatur
+              <br />
+              similique iste incidunt repudiandae officia.
+            </h3>
+          </div>
+          <div class="">
+            <div class="sm:pt-28">
+              <h1
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: rgb(20, 20, 20);
+                  font-size: 40px;
+                  line-height: 1.5;
+                "
+              >
+                <br />
+                DIGITAL MARKETING
+              </h1>
+              <br />
+              <h3
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: rgb(20, 20, 20);
+                  font-size: 16px;
+                  line-height: 1.5;
+                "
+              >
+                .. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                ad
+                <br />
+                repellendus nobis numquam! Commodi, adipisci? Iste consequuntur
+                <br />
+                commodi optio quas corrupti minus, quam eligendi animi
+                architecto,
+                <br />
+                necessitatibus excepturi aliquam. Quia?
+              </h3>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div id="page2">
+        <div class="bannerbox">
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+        </div>
+        <div class="relative">
+          <section class="bannerbox2">
+            <div id="star"></div>
+            <div id="star2"></div>
+            <div id="star3"></div>
+          </section>
+        </div>
+
+        <div
+          class="sm:flex hidden sm:justify-between w-full absolute sm:pt-28 px-10 items-center"
+          style="z-index: 10"
+        >
+          <div class="pt-28">
+            <img class="w-96" src="images/trasparent ui.png" alt="" />
+          </div>
+          <div class="">
+            <div class="sm:pt-28">
+              <br />
+              <h1
+                class="uppercase"
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  font-size: 40px;
+                  line-height: 1.5;
+                "
+              >
+                Techonogy
+              </h1>
+              <h1
+                class="uppercase"
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  font-size: 45px;
+                  line-height: 1.5;
+                "
+              >
+                Consulting
+              </h1>
+
+              <h3
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  font-size: 16px;
+                  line-height: 1.5;
+                "
+              >
+                .. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                ad
+                <br />
+                repellendus nobis numquam! Commodi, adipisci? Iste consequuntur
+                <br />
+                commodi optio quas corrupti minus, quam eligendi animi
+                architecto,
+                <br />
+                necessitatibus excepturi aliquam. Quia?
+              </h3>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>

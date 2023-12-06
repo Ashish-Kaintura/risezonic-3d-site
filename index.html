@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              barlow: ["Barlow", "sans"],
+              arsenal: ["Arsenal", "sans"],
+              robotoflex: ["Roboto Flex", "sans-serif"],
+              cormorantgaramond: ["Cormorant Garamond", "serif"],
+              sans: ["Nunito Sans", "Helvetica", "Arial", "sans-serif"],
+            },
+            letterSpacing: {
+              widest: ".10em",
+            },
+            width: {
+              120: "20rem",
+              128: "25rem",
+              130: "28rem",
+            },
+            height: {
+              120: "20rem",
+              128: "25rem",
+              130: "28rem",
+            },
+            animation: {
+              bounce: "bounce 1s infinite",
+            },
+            keyframes: {
+              bounce: {
+                "0%, 100%": {
+                  transform: "translateY(-5%)",
+                  "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
+                },
+                "50%": {
+                  transform: "rotate(0deg)",
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/box.css" />
+    <link rel="stylesheet" href="css/stars.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/whatwedo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <!-- aos  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="py-5 px-5 justify-between flex items-center bg-[#111111]">
+      <ul class="">
+        <li class="">
+          <a href="index.html"></a>
+          <img
+            class="w-[200px]"
+            src="logo/cropped-Risezonic-logo-1024x186 - Copy.png"
+            alt=""
+          />
+        </li>
+      </ul>
+      <ul class="sm:flex hidden text-black gap-5 text-white">
+        <!-- <li class="font-robotoflex uppercase text-[14px] cursor-pointer  hover:bg-[#f0661b] py-2 px-4 rounded-full border-4 border-[#111111] hover:border-[#d7d7d7] trasnsition ease-in duration-200 hover:translate-y-2">
+            <a href="index.html"></a>Home
+          </li> -->
+        <a href="what-we-do.html">
+          <li
+            class="font-robotoflex uppercase text-[14px] cursor-pointer hover:bg-[#f0661b] py-2 px-4 rounded-full border-4 border-[#111111] hover:border-[#d7d7d7] trasnsition ease-in duration-200 hover:translate-y-2"
+          >
+            What We Do
+          </li>
+        </a>
+        <a href="Aboutus.html">
+          <li
+            class="font-robotoflex uppercase text-[14px] cursor-pointer hover:bg-[#f0661b] py-2 px-4 rounded-full border-4 border-[#111111] hover:border-[#d7d7d7] trasnsition ease-in duration-200 hover:translate-y-2"
+          >
+            About Us
+          </li>
+        </a>
+        <a href="index.html">
+          <li
+            class="font-robotoflex uppercase text-[14px] cursor-pointer hover:bg-[#f0661b] py-2 px-4 rounded-full border-4 border-[#111111] hover:border-[#d7d7d7] trasnsition ease-in duration-200 hover:translate-y-2"
+          >
+            Services
+          </li>
+        </a>
+        <a href="index.html">
+          <li
+            class="font-robotoflex uppercase text-[14px] cursor-pointer hover:bg-[#f0661b] py-2 px-4 rounded-full border-4 border-[#111111] hover:border-[#d7d7d7] trasnsition ease-in duration-200 hover:translate-y-2"
+          >
+            Blogs
+          </li>
+        </a>
+      </ul>
+      <ul class="text-white sm:flex hidden gap-5">
+        <li class="relative">
+          <a href=""
+            ><button class="btn">
+              <strong class="font-robotoflex">OUR WORK</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+
+              <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </button>
+          </a>
+        </li>
+        <li class="relative">
+          <a href=""
+            ><button class="btn">
+              <strong class="font-robotoflex">CONTACT US</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+
+              <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </button>
+          </a>
+        </li>
+      </ul>
+      <ul class="text-white">
+        <li>
+          <i
+            class="fa-solid fa-bars fa-xl openbtn cursor-pointer"
+            onclick="toggleNav()"
+          ></i>
+          <i
+            class="fa-solid fa-times fa-xl closebtn cursor-pointer"
+            style="display: none"
+            onclick="closeNav()"
+          ></i>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- phone nave  -->
+    <div id="mySidebar" class="sidebar">
+      <a class="text-[15px] uppercase" href="Index.html">Home</a>
+      <a class="text-[15px] uppercase" href="what-we-do.html">WHAT WE DO</a>
+      <a class="text-[15px] uppercase" href="Aboutus.html">ABOUT US</a>
+      <a class="text-[15px] uppercase" href="Product.html">Media Center</a>
+      <a class="text-[15px] uppercase" href="AboutUs.html">Marketig cosultig</a>
+      <a class="text-[15px] uppercase" href="AboutUs.html"
+        >Techonogy cosultig</a
+      >
+      <a class="text-[15px] uppercase" href="AboutUs.html">Sales cosultig</a>
+      <a class="text-[15px] uppercase" href="AboutUs.html"
+        >Six Sigma cosultig</a
+      >
+      <a class="text-[15px] uppercase" href="ContactUs.html">CONTACT US</a>
+    </div>
+    <script>
+      function toggleNav() {
+        var sidenav = document.getElementById("mySidebar");
+        var menuIcon = document.querySelector(".openbtn");
+        var closeIcon = document.querySelector(".closebtn");
+
+        if (sidenav.style.width === "0px" || sidenav.style.width === "") {
+          sidenav.style.width = "250px";
+          menuIcon.style.display = "none";
+          menuIcon.style.transform = "rotate(360deg)";
+          closeIcon.style.display = "block";
+        } else {
+          sidenav.style.width = "0";
+          menuIcon.style.transform = "rotate(360deg)";
+          menuIcon.style.display = "block";
+          closeIcon.style.display = "none";
+        }
+      }
+
+      function closeNav() {
+        var sidenav = document.getElementById("mySidebar");
+        var menuIcon = document.querySelector(".openbtn");
+        var closeIcon = document.querySelector(".closebtn");
+
+        sidenav.style.width = "0";
+        menuIcon.style.display = "block";
+        closeIcon.style.display = "none";
+      }
+    </script>
+
+    <!-- phone end  -->
+
+    <section id="main">
+      <div id="page" class="sm:flex hidden">
+        <div class="bannerbox">
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+        </div>
+        <div class="relative">
+          <section class="bannerbox2">
+            <div id="star"></div>
+            <div id="star2"></div>
+            <div id="star3"></div>
+          </section>
+        </div>
+
+        <div
+          class="sm:flex hidden sm:justify-between w-full absolute sm:pt-28 px-10"
+          style="z-index: 10"
+        >
+          <div class="sm:h-96 w-96 pt-5">
+            <ul
+              class="sm:flex hidden justify-center flex-col text-center pt-28 text-white"
+            >
+              <li class="">
+                <a href=""></a
+                ><i
+                  class="fa-brands fa-instagram fa-2xl hover:scale-125 trasnsition duration-200 ease-in hover:text-[#f0661b]"
+                ></i>
+              </li>
+              <li class="mt-5">
+                <a href=""></a
+                ><i
+                  class="fa-brands fa-whatsapp fa-2xl hover:scale-125 trasnsition duration-200 ease-in hover:text-[#f0661b]"
+                ></i>
+              </li>
+              <li class="mt-5">
+                <a href=""></a
+                ><i
+                  class="fa-brands fa-linkedin-in fa-2xl hover:scale-125 trasnsition duration-200 ease-in hover:text-[#f0661b]"
+                ></i>
+              </li>
+              <li class="mt-5">
+                <a href=""></a
+                ><i
+                  class="fa-brands fa-facebook fa-2xl hover:scale-125 trasnsition duration-200 ease-in hover:text-[#f0661b]"
+                ></i>
+              </li>
+            </ul>
+          </div>
+          <div class="">
+            <div class="sm:pt-28">
+              <h1
+                class="uppercase"
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  font-size: 40px;
+                  line-height: 1.5;
+                "
+              >
+                Welcome to <br />RIsezonic
+                <br />
+              </h1>
+              <h2
+                class="hover"
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  margin-top: 1rem;
+                  line-height: 1.5;
+                "
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                <br />
+                Labore, quaerat pariatur ratione veniam modi quia accusantium
+                <br />
+                illo laborum incidunt debitis blanditiis earum nulla <br />
+                consequuntur hic ab qui quo! Minima, officiis. <br />
+              </h2>
+            </div>
+            <br />
+            <ul class="text-white sm:flex hidden gap-5">
+              <li>
+                <a href=""
+                  ><button
+                    class="bg-[transparent] py-2 px-4 rounded-lg font-robotoflex border-2 border-red-600 text-[14px] hover:bg-red-600 hover:text-white trasnsition ease-in duration-200"
+                  >
+                    KNOW MORE
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <canvas></canvas>
+      </div>
+      <div id="page1" class="sm:flex hidden">
+        <div class="bannerbox">
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+        </div>
+        <div
+          class="sm:flex hidden sm:justify-between w-full absolute sm:pt-28 px-10 items-center"
+          style="z-index: 10"
+        >
+          <div class="pt-28">
+            <h1
+              class="uppercase"
+              style="
+                font-family: gilroy;
+                font-weight: 400;
+                color: rgb(20, 20, 20);
+                font-size: 40px;
+                line-height: 1.5;
+              "
+            >
+              WEBSITE AND APP
+            </h1>
+            <h1
+              style="
+                font-family: gilroy;
+                font-weight: 400;
+                color: rgb(20, 20, 20);
+                font-size: 40px;
+                line-height: 1.5;
+              "
+            >
+              DEVELOPMENT
+            </h1>
+            <br />
+            <h3
+              style="
+                font-family: gilroy;
+                font-weight: 400;
+                color: rgb(20, 20, 20);
+                font-size: 15px;
+                line-height: 1.5;
+              "
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae
+              <br />
+              nobis architecto iure illum totam doloremque ab necessitatibus,
+              <br />
+              tempora officiis quisquam beatae voluptas maiores odio.
+              Consequatur
+              <br />
+              similique iste incidunt repudiandae officia.
+            </h3>
+          </div>
+          <div class="">
+            <div class="sm:pt-28">
+              <h1
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: rgb(20, 20, 20);
+                  font-size: 40px;
+                  line-height: 1.5;
+                "
+              >
+                <br />
+                DIGITAL MARKETING
+              </h1>
+              <br />
+              <h3
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: rgb(20, 20, 20);
+                  font-size: 16px;
+                  line-height: 1.5;
+                "
+              >
+                .. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                ad
+                <br />
+                repellendus nobis numquam! Commodi, adipisci? Iste consequuntur
+                <br />
+                commodi optio quas corrupti minus, quam eligendi animi
+                architecto,
+                <br />
+                necessitatibus excepturi aliquam. Quia?
+              </h3>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div id="page2" class="sm:flex hidden">
+        <div class="bannerbox">
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+        </div>
+        <div class="relative">
+          <section class="bannerbox2">
+            <div id="star"></div>
+            <div id="star2"></div>
+            <div id="star3"></div>
+          </section>
+        </div>
+
+        <div
+          class="sm:flex hidden sm:justify-between w-full absolute sm:pt-28 px-10 items-center"
+          style="z-index: 10"
+        >
+          <div class="pt-28">
+            <img class="w-96" src="images/trasparent ui.png" alt="" />
+          </div>
+          <div class="">
+            <div class="sm:pt-28">
+              <br />
+              <h1
+                class="uppercase"
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  font-size: 40px;
+                  line-height: 1.5;
+                "
+              >
+                Techonogy
+              </h1>
+              <h1
+                class="uppercase"
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  font-size: 45px;
+                  line-height: 1.5;
+                "
+              >
+                Consulting
+              </h1>
+
+              <h3
+                style="
+                  font-family: gilroy;
+                  font-weight: 400;
+                  color: white;
+                  font-size: 16px;
+                  line-height: 1.5;
+                "
+              >
+                .. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                ad
+                <br />
+                repellendus nobis numquam! Commodi, adipisci? Iste consequuntur
+                <br />
+                commodi optio quas corrupti minus, quam eligendi animi
+                architecto,
+                <br />
+                necessitatibus excepturi aliquam. Quia?
+              </h3>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div id="page3" class="bg-[#d7d7d7] py-5 px-5 flex-col">
+        <div class="bannerbox">
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+          <div class="boxs"></div>
+        </div>
+        <div>
+          <h1 class="text-center sm:text-4xl text-3xl pt-10 uppercase">
+            <span style="-webkit-text-stroke: 1.2px #000"> Risezonic</span>
+            <span
+              class="text-[transparent]"
+              style="-webkit-text-stroke: 1.2px #000"
+            >
+              Mission as an
+              <span class="text-black"> Organisation</span>
+              is not just best but <span class="text-black">Legendaryd.</span>
+            </span>
+          </h1>
+        </div>
+        <div class="sm:flex block sm:justify-evenly justify-center pt-12">
+          <div>
+            <div
+              style="background-image: url(gif/ezgif.com-resize.gif)"
+              class="card"
+            >
+              <div class="card__content">
+                <p class="card__title">Sales Consulting</p>
+                <p class="card__description">
+                  Our sales consultant act as the bridge between your company
+                  and its customers. Their job is to promote your firm's
+                  products and services, while building and maintaining a
+                  healthy, long-term relationship with clients.
+                </p>
+              </div>
+            </div>
+            <div class="text-center pt-8 text-xl text-black font-robotoflex">
+              <a href=""> <button class="button2">Sales Consulting</button></a>
+            </div>
+          </div>
+          <div>
+            <div
+              style="background-image: url(gif/techno\ comsulting.gif)"
+              class="card sm:mt-0 mt-3"
+            >
+              <div class="card__content">
+                <p class="card__title">Technology Consulting</p>
+                <p class="card__description">
+                  Our continued rapid growth is a testament to the certainty our
+                  clients experience every day Building on a decade of
+                  experience ,we add real value to clients satisfaction through
+                  domain expertise plus solutions with proven success in
+                  world-class service .
+                </p>
+              </div>
+            </div>
+            <div class="text-center pt-8 text-xl text-black font-robotoflex">
+              <a href="">
+                <button class="button2">Techonogy Consulting</button></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="sm:flex block sm:justify-evenly justify-center pt-5">
+          <div>
+            <div
+              style="background-image: url(gif/digital\ gif.gif)"
+              class="card"
+            >
+              <div class="card__content">
+                <p class="card__title">Digital Marketig</p>
+                <p class="card__description">
+                  the promotion of brands to connect with potential customers
+                  using the internet and other forms of digital communication.
+                  This includes not only email, social media, and web-based
+                  advertising, but also text and multimedia messages as a
+                  marketing channel.
+                </p>
+              </div>
+            </div>
+            <div class="text-center pt-8 text-xl text-black font-robotoflex">
+              <a href=""> <button class="button2">Digital Marketig</button></a>
+            </div>
+          </div>
+          <div>
+            <div
+              style="background-image: url(gif/web\ development.gif)"
+              class="card sm:mt-0 mt-3"
+            >
+              <div class="card__content">
+                <p class="card__title">Web And App Development</p>
+                <p class="card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+            </div>
+            <div class="text-center pt-8 text-xl text-black font-robotoflex">
+              <a href="">
+                <button class="button2">Web And App Development</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page4" class="" style="background: #151515">
+        <div
+          class="sm:flex block sm:justify-evenly justify-center pt-28 items-center"
+        >
+          <div class="pt-20">
+            <video
+              class="w-[450px]"
+              loop
+              autoplay
+              muted
+              src="mail_loop.webm"
+            ></video>
+          </div>
+          <div class="flex flex-col justify-center px-5">
+            <h1
+              class="sm:text-left sm:text-8xl text-5xl font-robotoflex text-white font-semibold"
+            >
+              Easily
+            </h1>
+            <h1
+              class="sm:text-left sm:text-8xl text-5xl font-robotoflex text-white font-semibold"
+            >
+              send requests
+            </h1>
+            <h1
+              class="sm:text-left sm:text-8xl text-5xl font-robotoflex text-white font-semibold"
+            >
+              via e-mails<span class="text-lg">....</span>
+            </h1>
+            <br />
+            <ul class="relative">
+              <li>
+                <a href=""
+                  ><button class="btn">
+                    <strong class="font-robotoflex">CONTACT US</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="page5" class="bg-white py-5 px-4">
+        <div class="bg-[#f0661b] flex flex-col">
+          <div class="flex flex-col justify-center">
+            <div class="sm:ps-8 ps-2 pt-12">
+              <h1
+                class="sm:text-5xl text-3xl font-robotoflex text-left text-white"
+                style="font-weight: lighter"
+              >
+                Our tech stack: designed to work with yours
+              </h1>
+            </div>
+            <div class="flex justify-evenly flex-wrap items-center mt-12">
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-node fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Node Js
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-java fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Java
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-python fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Python
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-html5 fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  HTML
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-css3 fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  CSS
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-react fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  React Js
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-angular fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Angular
+                </h1>
+              </div>
+            </div>
+            <div class="flex justify-evenly flex-wrap items-center pt-20 pb-10">
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-vuejs fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Vue.Js
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-react fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  React Native
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-js fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Java Script
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-android fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Android
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-apple fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  IOS
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-figma fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Figma
+                </h1>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <div>
+                  <i
+                    class="fa-brands fa-swift fa-beat-fade fa-2xl sm:text-7xl"
+                  ></i>
+                </div>
+                <br />
+                <h1 class="text-sm font-robotoflex text-center text-white">
+                  Swift
+                </h1>
+              </div>
+            </div>
+            <div class="pb-10">
+              <h4
+                class="font-robotoflex text-lg text-white sm:ps-8 ps-2 font-light"
+              >
+                Our speciality?
+              </h4>
+              <h4
+                class="font-robotoflex text-lg text-white sm:ps-8 ps-2 font-light"
+              >
+                High-performing, semantically-rich and accessible markup, paired
+                with
+              </h4>
+              <h4
+                class="font-robotoflex text-lg text-white sm:ps-8 ps-2 font-light"
+              >
+                perfectly organized CSS/SCSS architecture. Dreamy.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page6" class="bg-[#d7d7d7] py-4">
+        <div class="flex justify-center">
+          <h1 class="text-center text-4xl font-sans font-light py-5">
+            Strength in numbers
+          </h1>
+        </div>
+        <div class="sm:pt-16 flex justify-evenly">
+          <div class="text-center flex flex-col justify-center">
+            <div class="flex justify-center sm:gap-0 gap-4 mb-3 items-center">
+              <img
+                class="w-32"
+                src="icons/vegait__icon_exceptional_rgb_blk.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <h1 class="font-sans text-[#f0661b] font-semibold sm:text-lg">
+                15 +
+              </h1>
+              <span class="font-sans sm:text-xl">Years in the market</span>
+            </div>
+          </div>
+          <div class="text-center flex flex-col justify-center">
+            <div class="flex justify-center mb-3">
+              <img
+                class="sm:w-32 w-[100px]"
+                src="icons/vegait__icon_experience_rgb_blk.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <h1 class="font-sans text-[#f0661b] font-semibold sm:text-lg">
+                750 +
+              </h1>
+              <span class="font-sans sm:text-xl"
+                >Expert software engineers</span
+              >
+            </div>
+          </div>
+          <div class="text-center flex flex-col justify-center">
+            <div class="flex justify-center mb-3">
+              <img
+                class="w-32"
+                src="icons/vegait__icon_kick-off_rgb_blk.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <h1 class="font-sans text-[#f0661b] font-semibold sm:text-lg">
+                1500 +
+              </h1>
+              <span class="font-sans sm:text-xl">Projects launched</span>
+            </div>
+          </div>
+          <div class="text-center flex flex-col justify-center">
+            <div class="flex justify-center mb-3">
+              <img
+                class="w-32"
+                src="icons/vegait__icon_trust_rgb_blk.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <h1 class="font-sans text-[#f0661b] font-semibold sm:text-lg">
+                200 +
+              </h1>
+              <span class="font-sans sm:text-xl">Clients trusting us</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex sm:px-20 px-5 pt-10">
+          <div
+            class="flex flex-col px-7 w-full bg-[#151515] sm:h-130 sm:py-0 py-5 rounded-2xl relative"
+            style="overflow: hidden"
+          >
+            <div class="absolute" style="top: -120px; right: -100px">
+              <img
+                class="sm:w-128 w-72 text-white"
+                src="icons/vegait__icon_experience_rgb_wht.svg"
+                alt=""
+              />
+            </div>
+            <div class="pt-10 sm:pb-12">
+              <h1 class="text-white text-left text-5xl font-sans">
+                Build your <span class="text-[#f0661b] font-sans">vision</span>.
+                Boost your
+              </h1>
+
+              <span class="text-[#f0661b] text-5xl font-sans"> business.</span>
+            </div>
+            <div class="pt-10">
+              <h1 class="text-white text-left font-sans text-xl">
+                We’re software development partners working at the cutting edge
+                <br />
+                of digital product development. Our clients love us for our
+                <br />
+                technical expertise, deep sector knowledge, and relentless
+                <br />
+                passion – all the ingredients your business needs to thrive.
+                <br />
+              </h1>
+              <ul class="relative">
+                <li>
+                  <a href=""
+                    ><button class="btn">
+                      <strong class="font-robotoflex">CONTACT US</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="page7" class="bg-[#151515] py-5 sm:h-[830px]">
+        <div class="pt-8 pb-8">
+          <h1 class="text-5xl font-sans text-center px-5 text-white pt-4">
+            What's <span class="text-[#f0661b]"> Included </span> in Our
+            <span class="text-[#f0661b]"> Package </span>.
+          </h1>
+          <p class="text-center px-12 pt-5 text-lg text-white font-sans">
+            We understand that every business is unique. That's why we offer
+            customizable packages to fit your specific needs and budget. Whether
+            you're a startup looking to build a presence or an established brand
+            aiming to boost engagement, we've got the right solution for you.
+          </p>
+        </div>
+        <div class="sm:px-20 pb-5">
+          <div
+            class="bg-[#d7d7d7] rounded-2xl relative py-12"
+            style="
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(7, 7, 7, 0.35) 0px -2px 6px 0px inset;
+            "
+          >
+            <div class="flex justify-center object-cover sm:pt-8">
+              <img
+                class="animate-bounce"
+                src="images/web_background-removebg-preview.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="sm:flex hidden absolute left-[0%] sm:top-[0%] top-[-5%] dbox"
+            >
+              <div
+                class="sm:w-64 w-[170px] p-5 flex flex-col text-center justify-center"
+              >
+                <img
+                  src="vecter/-social-media--493900518-removebg-preview.png"
+                  alt=""
+                />
+                <div>
+                  <h1
+                    class="text-[#151515] sm:text-normal text-sm font-robotoflex sm:flex hidden"
+                  >
+                    Social Media Strategy Development
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sm:flex hidden absolute sm:left-[15%] left-[24%] inset-0 sm:top-[25%] top-[-6%]"
+            >
+              <div
+                class="sm:w-48 w-32 p-8 flex flex-col text-center justify-center"
+              >
+                <img
+                  src="vecter/regular-strategy-review-288630635.png"
+                  alt=""
+                />
+                <div>
+                  <h1
+                    class="text-[#151515] font-robotoflex pt-2 sm:text-normal text-sm sm:flex hidden"
+                  >
+                    Regular-Strategy
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sm:flex hidden absolute sm:left-[2%] left-[45%] inset-0 sm:top-[45%] top-[-5%]"
+            >
+              <div
+                class="sm:w-48 w-32 p-8 flex flex-col text-center justify-center"
+              >
+                <img
+                  src="vecter/ongoing-support-and-optimization-114221065.png"
+                  alt=""
+                />
+                <div>
+                  <h1
+                    class="text-[#151515] font-robotoflex pt-2 sm:text-normal text-sm sm:flex hidden"
+                  >
+                    Ongoing Support and Optimization
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sm:flex hidden absolute sm:right-[2%] right-[0%] sm:top-[50%] top-[75%]"
+            >
+              <div
+                class="sm:w-64 w-[150px] p-8 flex flex-col text-center justify-center"
+              >
+                <img src="vecter/content-creation--360145366-.png" alt="" />
+                <div>
+                  <h1
+                    class="text-[#151515] font-robotoflex pt-2 sm:flex hidden"
+                  >
+                    Content Creation
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sm:flex hidden absolute right-[0%] sm:top-[-2%] top-[-8%]"
+            >
+              <div
+                class="sm:w-48 w-[150px] p-8 flex flex-col text-center justify-center"
+              >
+                <img
+                  src="vecter/add-campaings-430675276-removebg-preview.png"
+                  alt=""
+                />
+                <div>
+                  <h1
+                    class="text-[#151515] font-robotoflex pt-2 sm:flex hidden"
+                  >
+                    Add Campaigns
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sm:flex hidden absolute sm:right-[15%] right-[20%] sm:top-[20%] top-[70%]"
+            >
+              <div
+                class="sm:w-48 w-[150px] p-8 flex flex-col text-center justify-center"
+              >
+                <img src="vecter/audince-engangement-403980950.png" alt="" />
+                <div>
+                  <h1
+                    class="text-[#151515] font-robotoflex pt-2 sm:flex hidden"
+                  >
+                    Audince Engagement
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="pt-8 absolute bottom-[-20%] left-[0%]" id="wheel">
+              <div class="sm:w-48 w-[150px] flex justify-center">
+                <img src="icons/Cogwheel.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sm:hidden flex justify-center">
+          <li>
+            <a href=""
+              ><button class="btn">
+                <strong class="font-robotoflex">KNOW MORE</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </button>
+            </a>
+          </li>
+        </div>
+      </div>
+
+      <div id="page8" class="bg-[#d7d7d7] relative">
+        <div class="absolute top-[0%] inset-0 left-[0%]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#151515"
+              fill-opacity="1"
+              d="M0,32L1440,224L1440,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+
+        <div
+          class="sm:pt-28 flex justify-center text-center sm:px-28 items-center"
+        >
+          <h1 class="font-cormorantgaramond pt-32">
+            Risezonic is Top Rated Consulting Company, and has been awarded for
+            its best service delivery based in India & Dubai offers well-planned
+            sales consulting services which will allow your sales team to focus
+            on real business opportunities in the market. Risezonic as a
+            consulting services company has successfully enhanced sales
+            performance of Clients and simultaneously
+            <br />
+            <br />decreased the overall sales cost of its Corporates– our
+            strategies allow the client’s sales teams to focus on delivering an
+            excellent ROI and better customer experience which offers them
+            tangible competitive benefits.
+          </h1>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#f0661b"
+            fill-opacity="1"
+            d="M0,224L1440,96L1440,320L0,320Z"
+          ></path>
+        </svg> -->
+      </div>
+      <div id="page9">
+        <div class="bg-[#d7d7d7] flex flex-col pb-5 sm:px-4 justify-center">
+          <div class="sm:py-8 py-4">
+            <h1
+              class="text-center text-5xl font-robotoflex uppercase"
+              style="-webkit-text-stroke: 1.2px #000; color: transparent"
+            >
+              <span
+                class="text-[#f0661b] font-robotoflex"
+                style="-webkit-text-stroke: 1.2px #d7d7d7"
+                >Title</span
+              >
+              of the video
+            </h1>
+          </div>
+          <div class="bg-[#151515] sm:p-4 rounded-2xl">
+            <div class="bg-[#151515] flex flex-col justify-center">
+              <div class="">
+                <video autoplay loop muted src="intro.webm"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hidde in mobile view  -->
+      <div
+        id="page10"
+        class="bg-[#151515] relative overflow-hidden sm:block hidden"
+      >
+        <div
+          class="bg-[#d7d7d7] rounded-b-2xl sm:flex block sm:justify-evenly justify-center items-center"
+        >
+          <div class="flex flex-col pt-5">
+            <div class="flex sm:justify-start justify-center text-left pb-5">
+              <h1 class="text-[#151515] text-left text-lg px-4">
+                <span class="text-[#f0661b]"> Want </span> to learn more
+                <span class="text-[#f0661b]"> About us </span>?
+              </h1>
+            </div>
+            <div class="px-4">
+              <p>
+                Send us a message, or call us if you prefer. Also feel free to
+                <br />
+                book a tour. We are happy to share our experiences with you
+                <br />
+                and let you feel a part of the adventure called Life at Vega
+                <br />
+                IT.
+              </p>
+            </div>
+            <div class="flex sm:justify-start justify-center pt-8 pb-5">
+              <button class="btn-3 font-sans">
+                <span> CONTACT US </span>
+              </button>
+            </div>
+          </div>
+          <div class="form-containers">
+            <form class="form">
+              <div class="form_front">
+                <div class="form_details font-robotoflex uppercase">
+                  Contact Us
+                </div>
+                <input type="text" class="form-input" placeholder="Username" />
+                <input type="email" class="form-input" placeholder="Email" />
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Phone Number"
+                />
+                <button class="form-btn">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="flex flex-col pt-5">
+            <div class="flex sm:justify-start justify-center sm:text-left pb-3">
+              <h1
+                class="text-[#f0661b] sm:text-left text-center text-2xl uppercase ps-3"
+              >
+                Address
+              </h1>
+            </div>
+            <div class="pt-4 px-4 sm:text-left text-center py-3">
+              <h1 class="text-[#151515]ext-sm">info@risezonic.com</h1>
+              <h1 class="text-[#151515]ext-sm">Gurugram</h1>
+              <br />
+              <p>
+                07th Floor, Gate No. 03 & Gate No. 04, <br />Ambience Island, NH
+                48, Gurugram, 122002
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 py-2">
+          <div
+            class="sm:flex hidden sm:justify-evenly justify-center uppercase text-white py-4 border-b-2 border-t-2 font-sans items-center"
+          >
+            <div
+              class="flex flex-col justify-center text-center uppercase items-center"
+            >
+              <!-- <h1 class="uppercase text-[#f0661b]">stay conected</h1> -->
+              <div class="socialcard flex justify-center text-center">
+                <a class="socialContainer containerOne" href="#">
+                  <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                    ></path>
+                  </svg>
+                </a>
+
+                <a class="socialContainer containerTwo" href="#">
+                  <svg viewBox="0 0 16 16" class="socialSvg twitterSvg">
+                    <path
+                      d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                    ></path>
+                  </svg>
+                </a>
+
+                <a class="socialContainer containerThree" href="#">
+                  <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
+                    <path
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                    ></path>
+                  </svg>
+                </a>
+
+                <a class="socialContainer containerFour" href="#">
+                  <svg viewBox="0 0 16 16" class="socialSvg whatsappSvg">
+                    <path
+                      d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="flex flex-col justify-center text-center uppercase">
+              <h1 class="pb-4 uppercase text-[#f0661b]">Quick Links</h1>
+              <div class="sm:flex block justify-center gap-5">
+                <a href="">Home</a>
+                <a href="">What we do</a>
+                <a href="">services</a>
+                <a href="">About Us</a>
+                <a href="">Blog</a>
+              </div>
+            </div>
+            <div class="flex flex-col justify-center text-center uppercase">
+              <h1 class="pb-4 uppercase text-[#f0661b]">Need ASSISTANCE?</h1>
+              <div class="flex justify-center gap-5">
+                <a href="">7827110079</a>
+                <a href="">Info@risezonic.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div
+            class="mt-2 bg-[#d7d7d7] sm:flex hidden justify-center py-3 font-robotoflex"
+          >
+            <h1 class="font-robotoflex text-[#151515]">
+              <span class="text-[#f0661b] font-semibold">@Risezonic</span>. All
+              Rights Reserved.Designed by<span
+                class="text-[#f0661b] font-semibold"
+              >
+                Risezonic</span
+              >
+            </h1>
+          </div>
+        </footer>
+      </div>
+      <!-- hidde in mobile view  -->
+
+      <!-- <div
+        class="h-[100vh] w-full sm:hidden flex flex-col justify-center relative overflow-hidden"
+      >
+        <div
+          class="flex-col justify-center text-center pt-20 uppercase font-robotoflex text-xl text-white"
+        >
+          <h1 class="text-center mb-5 pb-10 text-2xl font-robotoflex">
+            Quick link
+          </h1>
+          <div>
+            <a href="">Home</a>
+          </div>
+          <br />
+          <div>
+            <a href="">services</a>
+          </div>
+          <br />
+          <div>
+            <a href="">About Us</a>
+          </div>
+          <br />
+          <div>
+            <a href="">Privacy policy</a>
+          </div>
+          <br />
+          <div>
+            <a href="">blogs</a>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-center text-center uppercase items-center pt-12"
+        >
+          <h1 class="uppercase text-[#f0661b]">stay conected</h1>
+          <div class="socialcard flex justify-center text-center">
+            <a class="socialContainer containerOne" href="#">
+              <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                ></path>
+              </svg>
+            </a>
+
+            <a class="socialContainer containerTwo" href="#">
+              <svg viewBox="0 0 16 16" class="socialSvg twitterSvg">
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                ></path>
+              </svg>
+            </a>
+
+            <a class="socialContainer containerThree" href="#">
+              <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </a>
+
+            <a class="socialContainer containerFour" href="#">
+              <svg viewBox="0 0 16 16" class="socialSvg whatsappSvg">
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <footer>
+          <div
+            class="mt-2 bg-[#d7d7d7] flex sm:hidden justify-center pt-7 text-center font-robotoflex absolute inset-0 top-[90%] h-28"
+          >
+            <h1 class="font-robotoflex text-[#151515]">
+              <span class="text-[#f0661b] font-semibold">@Risezonic</span>. All
+              Rights Reserved.Designed by<span
+                class="text-[#f0661b] font-semibold"
+              >
+                Risezonic</span
+              >
+            </h1>
+          </div>
+        </footer>
+      </div> -->
+    </section>
+    <div class="sm:hidden block">
+      <div
+        class="bg-[#d7d7d7] rounded-b-2xl sm:flex block sm:justify-evenly justify-center items-center sm:pt-32"
+      >
+        <div class="flex flex-col pt-5">
+          <div class="flex sm:justify-start justify-center text-left pb-5">
+            <h1 class="text-[#151515] text-left text-lg px-4">
+              <span class="text-[#f0661b]"> Want </span> to learn more
+              <span class="text-[#f0661b]"> About us </span>?
+            </h1>
+          </div>
+          <div class="px-4">
+            <p>
+              Send us a message, or call us if you prefer. Also feel free to
+              <br />
+              book a tour. We are happy to share our experiences with you
+              <br />
+              and let you feel a part of the adventure called Life at Vega
+              <br />
+              IT.
+            </p>
+          </div>
+          <div class="flex sm:justify-start justify-center pt-8 pb-5">
+            <button class="btn-3 font-sans">
+              <span> CONTACT US </span>
+            </button>
+          </div>
+        </div>
+        <div class="form-containers">
+          <form class="form">
+            <div class="form_front">
+              <div class="form_details font-robotoflex uppercase">
+                Contact Us
+              </div>
+              <input type="text" class="form-input" placeholder="Username" />
+              <input type="email" class="form-input" placeholder="Email" />
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Phone Number"
+              />
+              <button class="form-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="flex flex-col pt-5">
+          <div class="flex sm:justify-start justify-center sm:text-left pb-3">
+            <h1
+              class="text-[#f0661b] sm:text-left text-center text-2xl uppercase ps-3"
+            >
+              Address
+            </h1>
+          </div>
+          <div class="pt-4 px-4 sm:text-left text-center py-3">
+            <h1 class="text-[#151515]ext-sm">info@risezonic.com</h1>
+            <h1 class="text-[#151515]ext-sm">Gurugram</h1>
+            <br />
+            <p>
+              07th Floor, Gate No. 03 & Gate No. 04, <br />Ambience Island, NH
+              48, Gurugram, 122002
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="px-4 py-2 bg-black">
+        <div
+          class="sm:flex block sm:justify-evenly justify-center uppercase text-white py-4 border-b-2 border-t-2 font-sans items-center"
+        >
+          <div
+            class="flex flex-col justify-center text-center uppercase items-center"
+          >
+            <!-- <h1 class="uppercase text-[#f0661b]">stay conected</h1> -->
+            <div class="socialcard flex justify-center text-center">
+              <a class="socialContainer containerOne" href="#">
+                <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                  ></path>
+                </svg>
+              </a>
+
+              <a class="socialContainer containerTwo" href="#">
+                <svg viewBox="0 0 16 16" class="socialSvg twitterSvg">
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  ></path>
+                </svg>
+              </a>
+
+              <a class="socialContainer containerThree" href="#">
+                <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
+                  <path
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                  ></path>
+                </svg>
+              </a>
+
+              <a class="socialContainer containerFour" href="#">
+                <svg viewBox="0 0 16 16" class="socialSvg whatsappSvg">
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center text-center uppercase">
+            <h1 class="pb-4 uppercase text-[#f0661b] mt-4 mb-5">Quick Links</h1>
+            <div class="sm:flex block justify-center gap-5">
+              <div class="mb-4"><a href="">Home</a></div>
+              <div class="mb-4"><a href="">What we do</a></div>
+              <div class="mb-4"><a href="">services</a></div>
+              <div class="mb-4"><a href="">About Us</a></div>
+              <div class="mb-4"><a href="">Blog</a></div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center text-center uppercase">
+            <h1 class="pb-4 uppercase text-[#f0661b]">Need ASSISTANCE?</h1>
+            <div class="flex justify-center gap-5">
+              <a href="">7827110079</a>
+              <a href="">Info@risezonic.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="bg-[#d7d7d7] flex justify-center py-3 font-robotoflex">
+          <h1 class="font-robotoflex text-[#151515] text-center">
+            <span class="text-[#f0661b] font-semibold">@Risezonic</span>. All
+            Rights Reserved.Designed by<span
+              class="text-[#f0661b] font-semibold"
+            >
+              Risezonic</span
+            >
+          </h1>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+      integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="dist/aos.js"></script>
+    <script>
+      document.querySelector("html").classList.remove("no-js");
+      if (!window.Cypress) {
+        const scrollCounter = document.querySelector(".js-scroll-counter");
+
+        AOS.init({
+          mirror: true,
+        });
+
+        document.addEventListener("aos:in", function (e) {
+          console.log("in!", e.detail);
+        });
+
+        window.addEventListener("scroll", function () {
+          scrollCounter.innerHTML = window.pageYOffset;
+        });
+      }
+    </script>
+    <!-- whats app icon  -->
+    <a class="whats-app" href="https://wa.me/7827110079" target="_blank">
+      <i class="fab fa-whatsapp icon animate-bounce my-float"></i>
+    </a>
+  </body>
+</html>
